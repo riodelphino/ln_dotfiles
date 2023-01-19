@@ -18,5 +18,5 @@ arr_source=(${arr_dir} ${arr_file}) # 配列を結合
 
 for source in $arr_source; do
    echo "~/${source}"
-   cp -a ~/${source} ../
+   cp -a ~/${source} ./
 done
