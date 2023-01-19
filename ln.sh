@@ -74,7 +74,7 @@ case $cmd_type in
                      echo "${r}x error  ${w}: '${target}' is already exist."
                   else  # 移動先ディレクトリがまだ存在しない
                      mv "${source}" "${target}"     # .config 内へ移動させる
-                     echo " ${b}o moved  ${w}: ${source} --> $${target}"
+                     echo " ${b}o moved  ${w}: ${source} --> ${target}"
                      ln -s "${target}" "${source}"  # シンボリックリンクを張る
                      echo " ${b}o linked ${w}: ${target} --> ${source}"
                   fi
