@@ -45,7 +45,7 @@ case $cmd_type in
       for source in $arr_source; do
          echo "-----------------------------------------------"
          if ! [ -e "${source}" ]; then # 移動元ディレクトリやファイルが存在しなかった場合
-            echo " ${r}x error  ${w}: '${source}' does not exit."
+            echo " ${r}x error  ${w}: '${source}' does not exist."
 
          else # 移動元ディレクトリが存在した場合
             if [ -L "${source}" ]; then type="link"; fi
@@ -100,7 +100,7 @@ case $cmd_type in
          fi
 
          if ! [ -e "${target}" ]; then # 移動元ディレクトリやファイルが存在しなかった場合
-            echo " ${r}x error  ${w}: '${target}' does not exit."
+            echo " ${r}x error  ${w}: '${target}' does not exist."
 
          else # 移動元ディレクトリが存在した場合
             if [ -L ${target} ]; then type="link"; fi
