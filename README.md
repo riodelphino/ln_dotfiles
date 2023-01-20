@@ -16,10 +16,10 @@ git での管理方法は別途調べてください。
 
 # Summary
 ## フォルダ
-#### test0  
+#### test0/  
 テスト環境の元々の構成を保存。renew_test_env.sh がこれを test へコピーする。  
 
-#### test  
+#### test/  
 テスト環境。何やってもいい。  
 
 ## 実行ファイル
@@ -29,7 +29,7 @@ git での管理方法は別途調べてください。
 *オプション : *  
 -r / --revert ... 上記の操作を元に戻す。  
 
-#### renew_test_env  
+#### renew_test_env.sh  
 テスト環境 test フォルダ を元に戻す。  
 
 #### cp_real_to_test.sh  
