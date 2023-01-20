@@ -6,36 +6,37 @@ git での管理方法は別途調べてください。
 
 # Screen Shots
  (画像では旧名の ln.sh となってますが、現在のファイル名は ln_dotfiles.sh です)
-##### `ln_dotfiles.sh` 実行結果
+#### `ln_dotfiles.sh` 実行結果
 <img width="389" alt="ln sh_01" src="https://user-images.githubusercontent.com/29378271/213618440-423df05a-275d-4b87-8e79-bcedbdb9aa4f.png">
 <img width="773" alt="ln sh_02" src="https://user-images.githubusercontent.com/29378271/213619022-401d7681-4017-45e9-830c-692c5270d65a.png">
-##### `ln_dotfiles.sh --revert` 実行結果
+
+#### `ln_dotfiles.sh --revert` 実行結果
 <img width="389" alt="ln sh_revert_01" src="https://user-images.githubusercontent.com/29378271/213619277-5779107d-062a-4b48-80b8-38b9433dbb44.png">
 <img width="773" alt="ln sh_revert_02" src="https://user-images.githubusercontent.com/29378271/213619312-0b75d0b7-bbc1-45a6-beaa-0344ca7da496.png">
 
 # Summary
 ## フォルダ
-##### test0  
+#### test0  
 テスト環境の元々の構成を保存。renew_test_env.sh がこれを test へコピーする。  
 
-##### test  
+#### test  
 テスト環境。何やってもいい。  
 
 ## 実行ファイル
-##### ln_dotfiles.sh  
+#### ln_dotfiles.sh  
 ドットファイルを .config へ移動し、元の場所へシンボリックリンクを張る。  
 どのドットファイルを操作するかは、中に書いてあるんで適宜編集してね。  
 *オプション : *  
 -r / --revert ... 上記の操作を元に戻す。  
 
-##### renew_test_env  
+#### renew_test_env  
 テスト環境 test フォルダ を元に戻す。  
 
-##### cp_real_to_test.sh  
+#### cp_real_to_test.sh  
 .pyenv .zshrc を始めとする実環境のドットファイル群を、一つ上の階層 ../ にコピーする。これなら何やってもいい。  
 どのドットファイルを操作するかは、中に書いてあるんで適宜編集してね。  
 
-##### README.md  
+#### README.md  
 このファイル  
 
 # Usage
