@@ -12,8 +12,8 @@ config_dir=".config"
 
 # ディレクトリ名を列挙
 arr_dir=(\
-   ".anydesk" ".cargo" ".composer" ".ctags.d" ".cups" ".docker" ".dvdcss" ".gem" ".ncftp" ".phpbrew" ".prettierd" ".pyenv"  \
-   ".rsyncosx" ".sdl" ".ssh" ".terminal" ".terminfo" ".vscode" ".w3m" ".wine" ".zsh_sessions"
+   ".anydesk" ".cargo" ".composer" ".ctags.d" ".cups" ".docker" ".dvdcss" ".gem" ".luarocks" ".ncftp" ".phpbrew" ".prettierd" ".pyenv"  \
+   ".rsyncosx" ".sdl" ".ssh" ".terminal" ".terminfo" ".vscode" ".w3m" ".wine" ".zsh" ".zcompcache" ".zsh_sessions"
 )
 # ファイル名を列挙
 arr_file=(\

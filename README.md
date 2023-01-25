@@ -1,8 +1,10 @@
 # Concepts
 ドットファイル群を git 管理するため、.config へ移動させた上でもとあった場所へシンボリックリンクを張る。  
-またその操作を元に戻す。  
+またその操作を元に戻す UNDO 機能付き。  
   
 git での管理方法は別途調べてください。 
+
+あと、新PCで git clone で ~/.config を落としてきた場合に、シンボリックリンクだけを貼ってくれると良いのですが、たぶん ./ln_dotfiles.sh でそのままイケる (mv がエラー吐くだけでその次の ln は動作するはず)
 
 # Screen Shots
  (画像では旧名の ln.sh となってますが、現在のファイル名は ln_dotfiles.sh です)
@@ -13,6 +15,12 @@ git での管理方法は別途調べてください。
 #### `ln_dotfiles.sh --revert` 実行結果
 <img width="389" alt="ln sh_revert_01" src="https://user-images.githubusercontent.com/29378271/213619277-5779107d-062a-4b48-80b8-38b9433dbb44.png">
 <img width="773" alt="ln sh_revert_02" src="https://user-images.githubusercontent.com/29378271/213619312-0b75d0b7-bbc1-45a6-beaa-0344ca7da496.png">
+
+# Capability
+- 対象ファイル/フォルダをリスト管理する  
+- 自動的に Dotfiles を ~/.config へ移動させ、元あった位置へシンボリックリンクを貼る  
+- それを UNDO する  
+- あと、新PCで git clone で ~/.config を落としてきた場合に、シンボリックリンクだけを貼ってくれると良い(たぶんイケる)  
 
 # Summary
 ## フォルダ
