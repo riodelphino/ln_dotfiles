@@ -1,18 +1,19 @@
 # Concepts
-ドットファイル群を git 管理するため、.config へ移動させた上でもとあった場所へシンボリックリンクを張る。  
-またその操作を元に戻す UNDO 機能付き。  
+ドットファイル群を git 管理する。
+そのために、ドットファイルを .config へ移動させた上で、もとあった場所へシンボリックリンクを張る。  
+その操作を元に戻す UNDO 機能付き。  
   
 git での管理方法は別途調べてください。 
 
-あと、新PCで git clone で ~/.config を落としてきた場合に、シンボリックリンクだけを貼ってくれると良いのですが、たぶん ./ln_dotfiles.sh でそのままイケる (mv がエラー吐くだけでその次の ln は動作するはず)
+あと、新PCで git clone で ~/.config を落としてきた場合に、シンボリックリンクだけを貼ってくれると良いのですが、たぶん ./lndots.sh でそのままイケる (mv がエラー吐くだけでその次の ln は動作するはず)
 
 # Screen Shots
- (画像では旧名の ln.sh となってますが、現在のファイル名は ln_dotfiles.sh です)
-#### `ln_dotfiles.sh` 実行結果
+ (画像では旧名の ln.sh となってますが、現在のファイル名は lndots.sh です)
+#### `lndots.sh` 実行結果
 <img width="389" alt="ln sh_01" src="https://user-images.githubusercontent.com/29378271/213618440-423df05a-275d-4b87-8e79-bcedbdb9aa4f.png">
 <img width="773" alt="ln sh_02" src="https://user-images.githubusercontent.com/29378271/213619022-401d7681-4017-45e9-830c-692c5270d65a.png">
 
-#### `ln_dotfiles.sh --revert` 実行結果
+#### `lndots.sh --revert` 実行結果
 <img width="389" alt="ln sh_revert_01" src="https://user-images.githubusercontent.com/29378271/213619277-5779107d-062a-4b48-80b8-38b9433dbb44.png">
 <img width="773" alt="ln sh_revert_02" src="https://user-images.githubusercontent.com/29378271/213619312-0b75d0b7-bbc1-45a6-beaa-0344ca7da496.png">
 
@@ -31,7 +32,7 @@ git での管理方法は別途調べてください。
 テスト環境。何やってもいい。  
 
 ## 実行ファイル
-#### ln_dotfiles.sh  
+#### lndots.sh  
 ドットファイルを .config へ移動し、元の場所へシンボリックリンクを張る。  
 どのドットファイルを操作するかは、中に書いてあるんで適宜編集してね。  
 *オプション : *  
@@ -59,16 +60,16 @@ git での管理方法は別途調べてください。
 ### ドットファイルを.config へ移動し、元あった場所へシンボリックリンクを張る
 ```zsh
 cd .config
-./ln_dotfiles.sh
+./lndots.sh
 ```
 ### 上記の操作を元に戻す
 ```zsh
-./ln_dotfiles.sh -r
+./lndots.sh -r
 # または
-./ln_dotfiles.sh --revert
+./lndots.sh --revert
 ```
 ### Warning
-ln_dotfiles.sh は、test/.config ディレクトリ内に配置して、そこから実行すること。  
+lndots.sh は、test/.config ディレクトリ内に配置して、そこから実行すること。  
 ディレクトリを相対指定してるのと、これ自身も git 管理するためです。  
 
 cp_real_to_test.sh は実環境のドットファイルの一部をカレントディレクトリにコピーしてきます。  
@@ -82,7 +83,7 @@ cd test/.config
 ## 本番実行
 ```zsh
 # 後戻りできないのでテストを必ずやってからね
-cp -a ln_dotfiles.sh ~/.config/
+cp -a lndots.sh ~/.config/
 cd ~/.config
 ./ln_dotifiles.sh
 ```
